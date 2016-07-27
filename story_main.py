@@ -20,7 +20,7 @@ RULES:
 2. Don't be super mean to anyone in the class.
 (Celebrities are fair game. Except Trump. I'm sick of hearing about Trump.)
 (Probably you shouldn't say anything about Clinton either. Or Obama. I don't want to P.O. the Secret Service.)
-(And don't say anything about Kanye West, Kim Kardashian or Taylor Swift. God knows what could happen.)
+(And I guess you shouldn't say anything about Kanye West, Kim Kardashian or Taylor Swift--God knows what could happen.)
 (Actually, probably you should avoid celebrities. Unless they are super cool.)
 
 3. Don't be super weird, like to the point that it ruins it and makes things awk for everyone. (just ... OK?)
@@ -30,7 +30,7 @@ instead of adding a line to the story.
 (Just put a note about what you fixed in the code when you commit.)
 
 5. You can add to any of the lists in the rand_ methods e.g. rand_adj()
---as long as you follow the rules above. 
+*****as long as you follow the rules above. 
 '''
 
 import random
@@ -52,20 +52,21 @@ def story():
     add_line = lines.append
 
     #Get some random strings to use in examples
-    cm_0 = rand_classmem()
-    cm_1 = rand_classmem()
-    cm_2 = rand_classmem()
+    protagonist = rand_classmem()
+    antagonist = rand_classmem()
     v_0 = rand_verb()
     adv_0 = rand_adv()
-    no_0 = rand_num()
+    num_0 = rand_num()
     q_0 = rand_quote()
+    adj_0 = rand_adj()
+    n_0 = rand_noun()
 
     #Kick off the story with a few lines
-    add_line("It was a pleasant afternoon in Fresno, California. {0} was just sitting there, minding their own business in CSCI150 ".format(cm_0))
+    add_line("It was a {0} afternoon in Fresno, California. {1} was just sitting there with {2}, minding their own business in CSCI150 ".format(adj_0, protagonist, n_0))
     add_line("when, suddenly, something unexpected happened:")
     #examples to use in class:
-    add_line("{0} {1}, {2} {3} {4} times in 2 minutes".format(cm_1, adv_0, v_0, cm_2, no_0))
-    add_line("{0} {1} said, looking at {2}.".format(q_0, cm_0,cm_1))
+    add_line("{0} {1} {2} {3} {4} times in 2 minutes".format(antagonist, adv_0, v_0, n_0, num_0))
+    add_line("{0} {1} said, looking at {2}.".format(q_0, protagonist, antagonist))
     
 #############################################################################################
 #           HERE'S WHERE YOU ADD TO THE STORY                                               #
@@ -90,7 +91,8 @@ def rand_adj():
             "smelly",
             "tall",
             "boring",
-            "cute"
+            "cute",
+            "pleasant"
             ]
             
     return rc(adjs)
@@ -102,10 +104,24 @@ def rand_adv():
     '''
     advs =["atrociously",
            "endearingly",
-           "very, very, VERY sneakily",
+           "very, very, VERY reluctantly",
            "heart-wrenchingly",
            "robustly",
-           "tremulously"
+           "tremulously",
+           "refreshingly",
+           "ignorantly",
+           "severely",
+           "aggressively",
+           "gingerly",
+           "sneakily",
+           "clumsily",
+           "randomly",
+           "deftly",
+           "pointlessly",
+           "passionately",
+           "boldly",
+           "deliberately"
+           
         ]
     return rc(advs)
 
@@ -114,34 +130,36 @@ def rand_noun():
     Returns a noun String from a list, which can be used in a line.
     (Added by Hannah S.)
     '''
-    nouns = ["you-know-what",
-             "a widget",
-             "a piglet the size of a dongle",
-             "genetically-modified cucumber nightmares",
+    nouns = ["the you-know-what",
+             "the widget",
+             "the piglet the size of a dongle",
+             "the genetically-modified cucumber",
              "Pikachu",
              "Charizard",
-             "tongues of flame",
+             "the herd of unicorns",
              "the batmobile",
              "Eric Cartman",
-             "a man in a 3-piece suit with a piece of toilet paper stuck to his left shoe",
-             "the meaning of life"
+             "the man in a 3-piece suit with a piece of toilet paper stuck to his left shoe",
+             "the paper-mache representation of the meaning of life",
+             "Illidan's left-hand warglaive"
              ]
     return rc(nouns)
 
 def rand_verb():
     '''
     Returns a past-tense transitive verb phrase String from a list, to be used in a line.
-    (Added by Hannah S.
+    (Added by Hannah S.)
     '''
-    verbs = ["ignorantly vitiated",
-             "severely dissillusioned",
-             "aggressively encouraged",
-             "gingerly avoided",
-             "reluctantly snuggled",
-             "clumsily tripped and fell on",
+    verbs = ["vitiated the natural development of",
+             "dissillusioned",
+             "encouraged",
+             "avoided",
+             "snuggled",
+             "tripped and fell on",
              "lectured about",
-             "deftly pick-pocketed",
-             "sang a moving, tragic ballad about"
+             "pick-pocketed",
+             "sang a moving, tragic ballad about",
+             "set fire to"
              ]
 
     return rc(verbs)
@@ -152,7 +170,14 @@ def rand_classmem():
     (Added by Hannah S.)
     '''
     names = ["Hannah",
-             "Dr. Liu"]
+             "Dr. Liu",
+             "Dr. Wilson",
+             "Dr. Ruby",
+             "Mr. Banerjee",
+             "Dr. Park",
+             "Dr. Auernheimer",
+             "Dr. Li"
+             ]
     return rc(names)
 
 def rand_num():
@@ -168,7 +193,8 @@ def rand_num():
             "precisely 2.718281828459045235360287471352662497757 (AKA 'e')",
             "approximately 24",
             "a benjamin",
-            "way more than necessary"
+            "way more than necessary",
+            "OVER 9,000 (!)"
             ]
     
     return rc(nums)
@@ -183,9 +209,16 @@ def rand_quote():
               "'Um, excuse me, but ... who is that?'",
               "'I guess I should have eaten more fiber last year.'",
               "'How can this be?? The fortune-teller should have warned me!'",
-              "'It is better to be a good liar than a bad con artist.'",
+              "'Well, I suppose it is better to be a good liar than a bad con artist.'",
               "'I really wish I had studied more in CSCI 41.'",
-              "'I think I watched a South Park episode where this happened...'"
+              "'I think I watched a South Park episode where this happened...'",
+              "'Oh noes!'",
+              "'If only I hadn't let that dratted hobbit take the ring of power!'",
+              "'I know who is to blame for this!'",
+              "'So, it has come to this.'",
+              "'My robot lemur assassins should be able to handle this!'",
+              "'Does anyone else think that guy looks like the Estonian Prime Minister?'",
+              "'Can anyone really prove that Harry isn't here right now wearing his invisibility cloak?'"
               ]
 
 
