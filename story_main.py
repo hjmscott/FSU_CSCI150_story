@@ -12,7 +12,7 @@ INSTRUCTIONS:
 in the story() method below. You can run (f5 in IDLE, or just run story_main.py) to see what's there so far.
 2. Save the file in the repository.
 3. Commit the change.
-4. Get points. 
+4. Get points.
 
 RULES:
 1. Don't do anything illegal / disturbingly immoral (e.g. detailed murder plans, giving away gma's secret cookie recipe)
@@ -30,7 +30,7 @@ instead of adding a line to the story.
 (Just put a note about what you fixed in the code when you commit.)
 
 5. You can add to any of the lists in the rand_ methods e.g. rand_adj()
-*****as long as you follow the rules above. 
+*****as long as you follow the rules above.
 '''
 
 import random
@@ -46,7 +46,7 @@ def story():
     Or, you can just add a boring old line.
     See rules outlined at the top of this file if you are uncertain.
 
-    Newlines will be inserted for you. 
+    Newlines will be inserted for you.
     '''
     lines = list()
     add_line = lines.append
@@ -67,17 +67,17 @@ def story():
     #examples to use in class:
     add_line("{0} {1} {2} {3} {4} times in 2 minutes".format(antagonist, adv_0, v_0, n_0, num_0))
     add_line("{0} {1} said, looking at {2}.".format(q_0, protagonist, antagonist))
-    
+
 #############################################################################################
 #           HERE'S WHERE YOU ADD TO THE STORY                                               #
 #           Use the template provided below.                                                #
 #############################################################################################
-    
-    #copy-pasta provided below for your convenience (seriously, I can't make this any easier):  
-    #add_line("") #no wild cards                                                                
+
+    #copy-pasta provided below for your convenience (seriously, I can't make this any easier):
+    #add_line("") #no wild cards
     #add_line("{0}".format(var)) #with wild card
 
-    
+
     return("\n".join(lines))
 
 
@@ -94,7 +94,7 @@ def rand_adj():
             "cute",
             "pleasant"
             ]
-            
+
     return rc(adjs)
 
 def rand_adv():
@@ -121,7 +121,7 @@ def rand_adv():
            "passionately",
            "boldly",
            "deliberately"
-           
+
         ]
     return rc(advs)
 
@@ -196,7 +196,7 @@ def rand_num():
             "way more than necessary",
             "OVER 9,000 (!)"
             ]
-    
+
     return rc(nums)
 
 def rand_quote():
@@ -224,4 +224,6 @@ def rand_quote():
 
     return rc(quotes)
 
+
 print(story())
+print("hello!!")
