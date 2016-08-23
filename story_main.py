@@ -64,6 +64,7 @@ def story():
     #Kick off the story with a few lines
     add_line("It was a {0} afternoon in Fresno, California. {1} was just sitting there with {2}, minding their own business in CSCI150 ".format(adj_0, protagonist, n_0))
     add_line("when, suddenly, something unexpected happened:")
+    add_line("The Fire Nation Attacked!")
     #examples to use in class:
     add_line("{0} {1} {2} {3} {4} times in 2 minutes".format(antagonist, adv_0, v_0, n_0, num_0))
     add_line("{0} {1} said, looking at {2}.".format(q_0, protagonist, antagonist))
